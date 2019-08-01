@@ -48,3 +48,5 @@
         return selfService.onStartCommand(intent, flags, startId);
     }
 ```
+- 但是我们会发现在bindService会有问题，会导致程序崩溃，为什么呢？我们做处理都是在onStartCommand里面，这个startService是没有问题，但是bindService就有问题了，因为整个生命周期不会走onStartCommand,也就是我们selfService这个面向接口对象编程的代理对象是为null，那怎么处理呢，我们直接在onBind里面做处理就行了呢
+
