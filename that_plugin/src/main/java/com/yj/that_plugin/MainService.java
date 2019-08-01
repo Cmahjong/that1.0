@@ -16,6 +16,7 @@ import com.yj.that_plugin_library.BaseService;
 public class MainService extends BaseService {
     @Override
     public IBinder onBind(Intent intent) {
+        Log.e("MainService", "onBind");
         return super.onBind(intent);
     }
 
