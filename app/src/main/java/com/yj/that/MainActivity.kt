@@ -20,5 +20,11 @@ class MainActivity : AppCompatActivity() {
                 putExtra(ProxyActivity.EXTRA_LAUNCHER_CLASS_NAME,"com.yj.that_plugin.MainActivity")
             })
         }
+        bt_start_service.setOnClickListener {
+            startService(Intent(this, ProxyService::class.java))
+        }
+        bt_stop_service.setOnClickListener {
+            stopService(Intent(this, ProxyService::class.java))
+        }
     }
 }
