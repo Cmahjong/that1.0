@@ -82,4 +82,4 @@
         return null;
     }
 ```  
-    
+ - 当然还有一点就是用前面的占位，我们apk的Service的ClassName和宿主APP的ClassName进行一一对应的关系，然后放在服务器，返回下载到本地，然后找到对应Apk的ClassName启动相应的宿主AppService   
